@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 0
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2b43714571d1bb54f9ad58e8232cb787, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1042,6 +1042,46 @@ Prefab:
     - target: {fileID: 436492, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 10807282, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
+      propertyPath: m_Intensity
+      value: 6.86000013
+      objectReference: {fileID: 0}
+    - target: {fileID: 10801862, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
+      propertyPath: m_Intensity
+      value: 6.86000013
+      objectReference: {fileID: 0}
+    - target: {fileID: 10828200, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
+      propertyPath: m_Intensity
+      value: 6.86000013
+      objectReference: {fileID: 0}
+    - target: {fileID: 10886636, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
+      propertyPath: m_Intensity
+      value: 6.86000013
+      objectReference: {fileID: 0}
+    - target: {fileID: 10861056, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
+      propertyPath: m_Intensity
+      value: 6.86000013
+      objectReference: {fileID: 0}
+    - target: {fileID: 10807282, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10801862, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10828200, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10886636, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10861056, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e957fff2ed74446398f6fb51ae0ac0b, type: 2}
