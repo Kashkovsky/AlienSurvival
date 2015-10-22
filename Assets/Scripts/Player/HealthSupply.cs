@@ -10,8 +10,16 @@ public class HealthSupply : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Player") {
-			other.GetComponent<PlayerHealth>().Heal(HealthIncrease);
-			Destroy(gameObject);
+			var health = other.GetComponent<PlayerHealth>();
+			if (health.CurrentHealth < health.StartHealth)
+			{
+				int healAmount = health.CurrentHealth <= health.StartHealth - HealthIncrease 
+						? HealthIncrease
+						: health.StartHealth - health.CurrentHealth;
+				health.Heal(healAmount);
+				Destroy(gameObject);
+			}
 		}
 	}
+
 }

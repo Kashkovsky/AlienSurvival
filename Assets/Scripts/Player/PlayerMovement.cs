@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour {
 		rb = GetComponent<Rigidbody> ();
 		anim = GetComponent<Animator> ();
 		audioController = GetComponent<AudioController> ();
-		rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+		rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 		cam = Camera.main.transform;
 		gun = transform.GetComponentInChildren<PlayerShooting> ();
 	}

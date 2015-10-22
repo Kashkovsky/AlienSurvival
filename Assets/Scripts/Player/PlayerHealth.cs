@@ -57,6 +57,8 @@ public class PlayerHealth : MonoBehaviour {
 	}
 
 	public void Heal(int amount) {
-		CurrentHealth = (int)Mathf.Lerp (CurrentHealth, CurrentHealth + amount, 1f);
+		Debug.Log ("Healed : " + amount);
+		CurrentHealth += amount;
+		HealthSlider.value = CurrentHealth;
 	}
 }
