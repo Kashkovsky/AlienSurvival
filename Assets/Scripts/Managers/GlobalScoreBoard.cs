@@ -19,7 +19,7 @@ public class GlobalScoreBoard : MonoBehaviour {
 		return scores;
 	}
 
-	void Awake () {
+	void Start () {
 
 		ScoresQuery ();
 	}

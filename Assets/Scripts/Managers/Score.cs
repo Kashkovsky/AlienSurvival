@@ -21,11 +21,8 @@ public class Score : MonoBehaviour {
 	}
 
 	void Update () {
-		if (scoreText) {
-			scoreText.text = score.ToString ();
-			print ("Current "  + score);
-		}
-		topScore.text = globalBoard.GetScores ().Count() > 0 ? "TOP SCORE: " + globalBoard.GetScores ().Last ().score.ToString () : "";
+		scoreText.text = score.ToString ();
+		topScore.text = globalBoard.GetScores ().Count() > 0 ? "TOP SCORE: " + globalBoard.GetScores ().First ().score.ToString () : "";
 	}
 
 	public void Add (int addScore) {

@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeBetweenAttacks: .5
-  AttackDamage: 1
+  AttackMultiplier: 5
 --- !u!114 &11420964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1482,8 +1482,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .800000012
-  m_Center: {x: 0, y: .800000012, z: 0}
+  m_Radius: .649999976
+  m_Center: {x: 0, y: .699999988, z: 0}
 --- !u!136 &13624480
 CapsuleCollider:
   m_ObjectHideFlags: 1
