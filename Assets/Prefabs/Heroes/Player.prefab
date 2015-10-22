@@ -2147,7 +2147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f07be235f4c04dd6b767446fd7b75ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamagePerShot: 20
+  DamagePerShot: 50
   TimeBetweenBullets: .150000006
   Range: 100
 --- !u!114 &11444976
@@ -2161,8 +2161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a36f5a652e84feeb22d62e46ff7d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HurtClip: {fileID: 8300000, guid: 9922a12f34d0a084aab32de985459723, type: 3}
-  DeathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
+  HurtClip: {fileID: 8300000, guid: 5af4f73d8f4e94150beb03be0205a04a, type: 3}
+  DeathClip: {fileID: 8300000, guid: 2b2b8af2e79a34781bc7c078ba583050, type: 3}
 --- !u!114 &11469150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3582,7 +3582,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4294967295
+        rgba: 4278190335
       minMaxState: 0
     startSize:
       scalar: 1
@@ -3788,7 +3788,7 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 1868693248
+          rgba: 1862271231
         key1:
           serializedVersion: 2
           rgba: 255

@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 0
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2b43714571d1bb54f9ad58e8232cb787, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -556,18 +556,6 @@ Prefab:
       propertyPath: DamageImage
       value: 
       objectReference: {fileID: 1293605573}
-    - target: {fileID: 11435832, guid: 9795fd9ac55c8434e9e4a2769061545e, type: 2}
-      propertyPath: DamagePerShot
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 11444976, guid: 9795fd9ac55c8434e9e4a2769061545e, type: 2}
-      propertyPath: DeathClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 2b2b8af2e79a34781bc7c078ba583050, type: 3}
-    - target: {fileID: 11444976, guid: 9795fd9ac55c8434e9e4a2769061545e, type: 2}
-      propertyPath: HurtClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 5af4f73d8f4e94150beb03be0205a04a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9795fd9ac55c8434e9e4a2769061545e, type: 2}
   m_IsPrefabParent: 0

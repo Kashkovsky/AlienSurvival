@@ -4,13 +4,17 @@ using System.Collections;
 public class EnemyAttack : MonoBehaviour {
 
 	public float TimeBetweenAttacks = 100f;
-	public int AttackDamage = 10;
+	//public int AttackDamage = 10;
+	//Later
+	int AttackDamage;
+	public int AttackMultiplier = 5;
+	//
 	Animator anim;
 	GameObject player;
 	PlayerHealth playerHealth;
 	EnemyHealth health;
 	bool playerInRange;
-
+	float timer = 0f;
 	void Awake() {
 		player = GameObject.Find("Player");
 		playerHealth = player.GetComponent<PlayerHealth> ();
@@ -34,17 +38,18 @@ public class EnemyAttack : MonoBehaviour {
 	}
 
 	void Update() {
-		if (playerInRange && health.CurrentHealth > 0)
-			StartCoroutine ("Attack");
+		timer += Time.deltaTime;
+		if (playerInRange && timer >= TimeBetweenAttacks && health.CurrentHealth > 0)
+			Attack ();
+
 		if (playerHealth.CurrentHealth <= 0) anim.SetTrigger("PlayerDeath");
 	}
 
-	IEnumerator Attack() {
+	void Attack() {
 		if (playerHealth.CurrentHealth > 0) {
-			playerHealth.TakeDamage (AttackDamage, transform.position);
+			playerHealth.TakeDamage (AttackDamage * AttackMultiplier, transform.position);
 			anim.SetTrigger("Attack");
-			Debug.Log("hti");
+			timer = 0f;
 		}
-		yield return new WaitForSeconds(TimeBetweenAttacks);
 	}
 }
