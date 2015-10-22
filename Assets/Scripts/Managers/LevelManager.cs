@@ -12,6 +12,12 @@ public class LevelManager : MonoBehaviour {
 		}
 	}
 
+	void Update() {
+		if (Input.GetButtonDown ("Cancel")) {
+			LoadLevel("Options");
+		}
+	}
+
 	public void LoadLevel (string name) {
 		Application.LoadLevel (name);
 	}

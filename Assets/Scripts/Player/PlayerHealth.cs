@@ -5,7 +5,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour {
 
 	public int StartHealth = 100;
-	public int CurrentHealth;
+	public int CurrentHealth = 0;
 	public Slider HealthSlider;
 	public Image DamageImage;
 	public float FlashSpeed = 5f;
@@ -54,5 +54,9 @@ public class PlayerHealth : MonoBehaviour {
 		audioController.HealthAudio (true);
 		playerMovement.enabled = false;
 		score.GameOver ();
+	}
+
+	public void Heal(int amount) {
+		CurrentHealth = (int)Mathf.Lerp (CurrentHealth, CurrentHealth + amount, 1f);
 	}
 }
