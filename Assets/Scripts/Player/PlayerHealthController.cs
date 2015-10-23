@@ -12,7 +12,7 @@ public class PlayerHealthController : MonoBehaviour {
 	public Color FlashColor = new Color (1f, 0f, 0f, 0.1f);
 	
 	Animator anim;
-	PlayerMovement playerMovement;
+	PlayerMoveController playerMovement;
 	ParticleSystem hitParticles;
 	
 	bool isDead;
@@ -21,7 +21,7 @@ public class PlayerHealthController : MonoBehaviour {
 	
 	void Awake() {
 		anim = GetComponent<Animator> ();
-		playerMovement = GetComponent<PlayerMovement> ();
+		playerMovement = GetComponent<PlayerMoveController> ();
 		hitParticles = GetComponentsInChildren<ParticleSystem> ()[0];
 		CurrentHealth = StartHealth;
 	}
@@ -47,7 +47,7 @@ public class PlayerHealthController : MonoBehaviour {
 	void Death ()
 	{
 		isDead = true;
-		anim.SetTrigger ("Die");
+		anim.SetTrigger ("Death");
 		playerMovement.enabled = false;
 	}
 
