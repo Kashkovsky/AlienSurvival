@@ -14,7 +14,6 @@ public class EnemyHealthController : MonoBehaviour {
 	ParticleSystem hitParticles;
 	ParticleSystem deathParticles;
 	ParticleSystem smellParticles;
-	CapsuleCollider capsuleCollider;
 	
 	bool isDead;
 	
@@ -25,7 +24,6 @@ public class EnemyHealthController : MonoBehaviour {
 		hitParticles = particles[0];
 		deathParticles = particles [1];
 		smellParticles = particles [2];
-		capsuleCollider = GetComponent<CapsuleCollider> ();
 	}
 	
 	void Start() {
@@ -48,7 +46,6 @@ public class EnemyHealthController : MonoBehaviour {
 		isDead = true;
 		deathParticles.Play ();
 		smellParticles.Play ();
-		capsuleCollider.isTrigger = true;
 		anim.SetTrigger ("Dead");
 		enemyAudio.clip = DeathAudio;
 		enemyAudio.Play ();
