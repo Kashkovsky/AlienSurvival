@@ -18,7 +18,7 @@ public class PlayerMoveController : MonoBehaviour {
 	float moveDirection = 1;
 	bool jump;
 	
-	PlayerShooting gun;
+	PlayerShootingController gun;
 	
 	
 	void Awake()
@@ -28,7 +28,7 @@ public class PlayerMoveController : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 		cam = Camera.main.transform;
-		gun = transform.GetComponentInChildren<PlayerShooting> ();
+		gun = transform.GetComponentInChildren<PlayerShootingController> ();
 	}
 	
 	void Update() {
