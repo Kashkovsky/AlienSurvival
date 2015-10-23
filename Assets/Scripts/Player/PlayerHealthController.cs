@@ -54,4 +54,10 @@ public class PlayerHealthController : MonoBehaviour {
 		playerMovement.enabled = false;
 	}
 
+	public void Heal(int amount) {
+		Debug.Log ("Healed : " + amount);
+		CurrentHealth += amount;
+		HealthSlider.value = CurrentHealth;
+	}
+
 }
