@@ -14,7 +14,8 @@ public class EnemyHealthController : MonoBehaviour {
 	ParticleSystem hitParticles;
 	ParticleSystem deathParticles;
 	ParticleSystem smellParticles;
-	
+	ScoreManager score;
+
 	bool isDead;
 	
 	void Awake() {
@@ -24,6 +25,7 @@ public class EnemyHealthController : MonoBehaviour {
 		hitParticles = particles[0];
 		deathParticles = particles [1];
 		smellParticles = particles [2];
+		score = GameObject.Find ("ScoreManager").GetComponent<ScoreManager> ();
 	}
 	
 	void Start() {
@@ -50,5 +52,6 @@ public class EnemyHealthController : MonoBehaviour {
 		enemyAudio.clip = DeathAudio;
 		enemyAudio.Play ();
 		Destroy (gameObject, 7f);
+		score.Add (GiveScore);
 	}	
 }
