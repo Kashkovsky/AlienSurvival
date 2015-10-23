@@ -189,7 +189,7 @@ ModelImporter:
           preInfinity: 2
           postInfinity: 2
       events:
-      - time: .502439022
+      - time: .248917893
         functionName: HandleDisableEffects
         data: 
         objectReferenceParameter: {instanceID: 0}

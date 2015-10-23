@@ -4,7 +4,6 @@ using System.Collections;
 public class PlayerShootingController : MonoBehaviour {
 
 	public int DamagePerShot = 20;
-	public float TimeBetweenBullets = 0.15f;
 	public float Range = 100f;
 	
 	float timer;
@@ -15,7 +14,6 @@ public class PlayerShootingController : MonoBehaviour {
 	LineRenderer line;
 	AudioSource gunAudio;
 	Light gunLight;
-	float effectsDisplayTime = 0.2f;
 	
 	void Awake() {
 		shootableMask = LayerMask.GetMask ("Shootable");
