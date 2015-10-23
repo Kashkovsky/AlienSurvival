@@ -421,7 +421,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeBetweenAttacks: 1
   AttackDamage: 10
+  AttackSound: {fileID: 8300000, guid: bfda3aba503f04f959f060bb73d37530, type: 3}
   AttackMultiplier: 5
+--- !u!114 &164093049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 164093039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0143cf0a77f484ff28fc3835aae8c8ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartHealth: 100
+  CurrentHealth: 0
+  GiveScore: 10
+  DeathAudio: {fileID: 8300000, guid: dfa007c7595234ce59cec208d2bed2f1, type: 3}
 --- !u!1 &382397525
 GameObject:
   m_ObjectHideFlags: 0

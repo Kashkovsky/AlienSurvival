@@ -5,12 +5,12 @@ public class EnemyAttackController : MonoBehaviour {
 
 	public float TimeBetweenAttacks = 100f;
 	public int AttackDamage = 10;
-
+	public AudioClip AttackSound;
 	public int AttackMultiplier = 5;
 
 	Animator anim;
 	GameObject player;
-
+	AudioSource source;
 	PlayerHealthController playerHealth;
 	bool playerInRange;
 	float timer = 0f;
@@ -18,6 +18,7 @@ public class EnemyAttackController : MonoBehaviour {
 		player = GameObject.Find("Player");
 		playerHealth = player.GetComponent<PlayerHealthController> ();
 		anim = GetComponent<Animator> ();
+		source = GetComponent<AudioSource> ();
 	}
 	
 	void OnTriggerEnter(Collider collider) {
@@ -42,6 +43,8 @@ public class EnemyAttackController : MonoBehaviour {
 	
 	void Attack() {
 		if (playerHealth.CurrentHealth > 0) {
+			source.clip = AttackSound;
+			source.Play ();
 			playerHealth.TakeDamage (AttackDamage * AttackMultiplier, transform.position);
 			anim.SetTrigger("Attack");
 			timer = 0f;
