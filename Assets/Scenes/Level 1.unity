@@ -74,17 +74,17 @@ NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
     serializedVersion: 2
-    agentRadius: .5
-    agentHeight: 2
-    agentSlope: 45
+    agentRadius: .300000012
+    agentHeight: 1
+    agentSlope: 60
     agentClimb: .400000006
-    ledgeDropHeight: 0
-    maxJumpAcrossDistance: 0
-    accuratePlacement: 0
+    ledgeDropHeight: 10
+    maxJumpAcrossDistance: 10
+    accuratePlacement: 1
     minRegionArea: 2
-    cellSize: .166666672
+    cellSize: .100000001
     manualCellSize: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 505fa8327f768405eb92b8b905cb3147, type: 2}
 --- !u!1 &48752641
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +250,23 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 154196, guid: cea4155f8371b4b6ab41fc35d83d25bf, type: 2}
   m_PrefabInternal: {fileID: 1076255341}
+--- !u!95 &164093040
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 164093039}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 01f485510aa7090439b792a8d57dd8a3, type: 3}
+  m_Controller: {fileID: 9100000, guid: 0b8eadedce1fd46caadedcc5f6311e4f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!195 &164093041
 NavMeshAgent:
   m_ObjectHideFlags: 0
