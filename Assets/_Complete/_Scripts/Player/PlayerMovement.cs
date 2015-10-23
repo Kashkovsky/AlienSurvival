@@ -87,12 +87,10 @@ public class PlayerMovement : MonoBehaviour {
 		if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, GroundCheckDistance))
 		{
 			IsGrounded = true;
-			anim.applyRootMotion = true;
 		}
 		else
 		{
 			IsGrounded = false;
-			anim.applyRootMotion = false;
 		}
 	}
 
