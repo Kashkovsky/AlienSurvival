@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Splash.unity
+    path: Assets/_Complete/_Scenes/Splash.unity
   - enabled: 1
-    path: Assets/Scenes/Start Menu.unity
+    path: Assets/_Complete/_Scenes/Start Menu.unity
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
+    path: Assets/_Complete/_Scenes/Level 1.unity
   - enabled: 1
-    path: Assets/Scenes/Score.unity
+    path: Assets/_Complete/_Scenes/Score.unity
   - enabled: 1
-    path: Assets/Scenes/Options.unity
+    path: Assets/_Complete/_Scenes/Options.unity
   - enabled: 1
-    path: Assets/Scenes/Name.unity
+    path: Assets/_Complete/_Scenes/Name.unity
