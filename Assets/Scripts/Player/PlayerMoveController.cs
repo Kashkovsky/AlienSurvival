@@ -9,7 +9,7 @@ public class PlayerMoveController : MonoBehaviour {
 	Rigidbody rb;
 	Animator anim;
 	Transform cam;
-	
+	PlayerAudioController audioController;
 	
 	Vector3 Move;
 	bool Jump;
@@ -29,17 +29,20 @@ public class PlayerMoveController : MonoBehaviour {
 		rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 		cam = Camera.main.transform;
 		gun = transform.GetComponentInChildren<PlayerShootingController> ();
+		audioController = GetComponent<PlayerAudioController> ();
 	}
 	
 	void Update() {
 		horizontal = Input.GetAxisRaw("Horizontal");
 		jump = Input.GetButtonDown ("Jump");
+		audioController.MovementAudio (horizontal, jump);
 
 		if (Input.GetButtonDown ("Fire1")) {
 			anim.SetBool ("isShooting", true);
 		}
 		if (Input.GetButtonUp ("Fire1"))
 			anim.SetBool ("isShooting", false);
+
 	}
 	
 	

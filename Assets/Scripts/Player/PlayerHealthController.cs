@@ -14,7 +14,7 @@ public class PlayerHealthController : MonoBehaviour {
 	Animator anim;
 	PlayerMoveController playerMovement;
 	ParticleSystem hitParticles;
-	
+	PlayerAudioController audioController;
 	bool isDead;
 	bool damaged;
 	
@@ -24,6 +24,7 @@ public class PlayerHealthController : MonoBehaviour {
 		playerMovement = GetComponent<PlayerMoveController> ();
 		hitParticles = GetComponentsInChildren<ParticleSystem> ()[0];
 		CurrentHealth = StartHealth;
+		audioController = GetComponent<PlayerAudioController> ();
 	}
 	
 	void Update() {
@@ -35,6 +36,7 @@ public class PlayerHealthController : MonoBehaviour {
 	}
 	
 	public void TakeDamage(int amount, Vector3 hitPoint) {
+		audioController.HealthAudio (false);
 		damaged = true;
 		hitParticles.transform.LookAt(hitPoint);
 		hitParticles.Play ();
@@ -46,6 +48,7 @@ public class PlayerHealthController : MonoBehaviour {
 	
 	void Death ()
 	{
+		audioController.HealthAudio (true);
 		isDead = true;
 		anim.SetTrigger ("Death");
 		playerMovement.enabled = false;
