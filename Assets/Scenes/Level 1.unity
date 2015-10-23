@@ -1222,6 +1222,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1599166913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1599166907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9d8c5eb050e4d3ab6f0a01a01204d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartHealth: 100
+  CurrentHealth: 0
+  HealthSlider: {fileID: 2009872685}
+  DamageImage: {fileID: 650475158}
+  FlashSpeed: 5
+  FlashColor: {r: 1, g: 0, b: 0, a: .100000001}
 --- !u!1 &1730973277
 GameObject:
   m_ObjectHideFlags: 0
