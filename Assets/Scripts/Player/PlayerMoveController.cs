@@ -34,7 +34,12 @@ public class PlayerMoveController : MonoBehaviour {
 	void Update() {
 		horizontal = Input.GetAxisRaw("Horizontal");
 		jump = Input.GetButtonDown ("Jump");
-		
+
+		if (Input.GetButtonDown ("Fire1")) {
+			anim.SetBool ("isShooting", true);
+		}
+		if (Input.GetButtonUp ("Fire1"))
+			anim.SetBool ("isShooting", false);
 	}
 	
 	
@@ -60,5 +65,13 @@ public class PlayerMoveController : MonoBehaviour {
 	void HandleJump() {
 		rb.velocity = new Vector3(rb.velocity.x, JumpPower, rb.velocity.z);
 		anim.applyRootMotion = false;
+	}
+
+	public void HandleShoot() {
+		gun.Shoot ();
+	}
+
+	public void HandleDisableEffects() {
+		gun.DisableEffects ();
 	}
 }
